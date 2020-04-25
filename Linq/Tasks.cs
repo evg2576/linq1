@@ -89,9 +89,9 @@ namespace Linq
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task12(IEnumerable<int> integerList1, IEnumerable<int> integerList2)
+        public static IEnumerable<(int, int)> Task12(IEnumerable<int> integerList1, IEnumerable<int> integerList2)
         {
-            //TODO :Delete line below and write your own solution 
+            //TODO :Delete line below and write your own solution. To return result use tuple
             throw new NotImplementedException();
         }
 
