@@ -15,31 +15,31 @@ namespace Linq
 
         #region Low
 
-        public static IEnumerable<string> Task1_Low(char c, IEnumerable<string> stringList)
+        public static IEnumerable<string> Task1(char c, IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task2_Low(IEnumerable<string> stringList)
+        public static IEnumerable<string> Task2(IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task3_Low(IEnumerable<string> stringList)
+        public static IEnumerable<string> Task3(IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task4_Low(int k, IEnumerable<string> stringList)
+        public static IEnumerable<string> Task4(int k, IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task5_Low(IEnumerable<int> integerList)
+        public static IEnumerable<string> Task5(IEnumerable<int> integerList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
@@ -49,31 +49,31 @@ namespace Linq
 
         #region Middle
 
-        public static IEnumerable<string> Task1_Middle(IEnumerable<int> numbers, IEnumerable<string> stringList)
+        public static IEnumerable<string> Task6(IEnumerable<int> numbers, IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<int> Task2_Middle(int k, IEnumerable<int> integerList)
+        public static IEnumerable<int> Task7(int k, IEnumerable<int> integerList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
         
-        public static IEnumerable<int> Task3_Middle(int k, int d, IEnumerable<int> integerList)
+        public static IEnumerable<int> Task8(int k, int d, IEnumerable<int> integerList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task4_Middle(IEnumerable<string> stringList)
+        public static IEnumerable<string> Task9(IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task5_Middle(IEnumerable<string> stringList)
+        public static IEnumerable<string> Task10(IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
@@ -83,32 +83,32 @@ namespace Linq
 
         #region Advance
 
-        public static IEnumerable<YearSchoolStat> Task1_Advance(IEnumerable<Entrant> nameList)
+        public static IEnumerable<YearSchoolStat> Task11(IEnumerable<Entrant> nameList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task2_Advance(IEnumerable<int> integerList1, IEnumerable<int> integerList2)
+        public static IEnumerable<string> Task12(IEnumerable<int> integerList1, IEnumerable<int> integerList2)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<YearSchoolStat> Task3_Advance(IEnumerable<Entrant> nameList, IEnumerable<int> yearList)
+        public static IEnumerable<YearSchoolStat> Task13(IEnumerable<Entrant> nameList, IEnumerable<int> yearList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<MaxDiscountOwner> Task4_Advance(IEnumerable<Supplier> supplierList,
+        public static IEnumerable<MaxDiscountOwner> Task14(IEnumerable<Supplier> supplierList,
                 IEnumerable<SupplierDiscount> supplierDiscountList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<CountryStat> Task5_Advance(IEnumerable<Good> goodList,
+        public static IEnumerable<CountryStat> Task15(IEnumerable<Good> goodList,
             IEnumerable<StorePrice> storePriceList)
         {
             //TODO :Delete line below and write your own solution 
