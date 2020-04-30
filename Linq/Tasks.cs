@@ -21,7 +21,7 @@ namespace Linq
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> Task2(IEnumerable<string> stringList)
+        public static IEnumerable<int> Task2(IEnumerable<string> stringList)
         {
             //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
