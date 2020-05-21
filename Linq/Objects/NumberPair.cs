@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Linq.Objects
+﻿namespace Linq.Objects
 {
     public class NumberPair
     {
