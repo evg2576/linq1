@@ -533,6 +533,7 @@ namespace Linq.Tests
                 yearList: new[] { 2020, 2017, 2018 },
                 expected: new[]
                 {
+                    new YearSchoolStat {NumberOfSchools = 0, Year = 2020}, 
                     new YearSchoolStat {NumberOfSchools = 1, Year = 2017},
                     new YearSchoolStat {NumberOfSchools = 2, Year = 2018}
                 });
@@ -550,8 +551,12 @@ namespace Linq.Tests
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017},
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017}
                 },
-                yearList: new[] { 2020, 2013 },
-                expected: new List<YearSchoolStat>());
+                yearList: new[] {2020, 2013},
+                expected: new[]
+                {
+                    new YearSchoolStat {NumberOfSchools = 0, Year = 2013},
+                    new YearSchoolStat {NumberOfSchools = 0, Year = 2020}
+                });
         }
         
         private IEnumerable<(IEnumerable<Supplier> supplierList, IEnumerable<SupplierDiscount> supplierDiscountList,
