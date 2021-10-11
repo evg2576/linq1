@@ -60,7 +60,8 @@ namespace Linq
 
         public static IEnumerable<string> Task9(IEnumerable<string> stringList)
         {
-            return stringList.GroupBy(s => s.Substring(0, 1));
+            throw new NotImplementedException();
+            //return stringList.GroupBy(s => s.Substring(0, 1));
         }
 
         public static IEnumerable<string> Task10(IEnumerable<string> stringList)
