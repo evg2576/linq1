@@ -9,7 +9,7 @@ namespace Linq
     {
         public static string TaskExample(IEnumerable<string> stringList)
         {
-            return stringList.Aggregate<string>((x, y) => x + y);
+            return stringList.Aggregate((x, y) => x + y);
         }
 
         #region Low
@@ -60,13 +60,22 @@ namespace Linq
 
         public static IEnumerable<string> Task9(IEnumerable<string> stringList)
         {
+            var query = from str in stringList
+                        group str by str.Substring(0, 1) into str
+                        orderby str.Sum(str => str.Length) descending,
+                        str.Key ascending
+                        select { str.Sum(str => str.Length) + "-" + str.Key };
+
+            var query_ = stringList.GroupBy(s => s.Substring(0, 1).Select(p => new
+            {
+                ch = p.Sum(p => s.Length) + "-" + s.Key
+            }
+                /*(s => s.Substring(0, 1).Select(s => s.ToString().Sum(s => s.ToString().Length)))*/;
             throw new NotImplementedException();
-            //return stringList.GroupBy(s => s.Substring(0, 1));
         }
 
         public static IEnumerable<string> Task10(IEnumerable<string> stringList)
         {
-            //TODO :Delete line below and write your own solution 
             throw new NotImplementedException();
         }
 

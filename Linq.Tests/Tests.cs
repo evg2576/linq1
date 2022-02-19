@@ -184,7 +184,7 @@ namespace Linq.Tests
 
         #region Middle
         // UNCOMMENT TO CHECK MIDDLE PART
-        /*
+
         [Test]
         public void Task6Test()
         {
@@ -242,9 +242,9 @@ namespace Linq.Tests
         private IEnumerable<(IEnumerable<int> numbers, IEnumerable<string> stringList, IEnumerable<string> expected)> Task6Data()
         {
             yield return (
-                numbers: new []{ 4, 1, 6 },
-                stringList: new []{ "qwer", "5qwer", "3qwe", "7qwert", "q" },
-                expected: new []{ "3qwe", "Not found", "7qwert" });
+                numbers: new[] { 4, 1, 6 },
+                stringList: new[] { "qwer", "5qwer", "3qwe", "7qwert", "q" },
+                expected: new[] { "3qwe", "Not found", "7qwert" });
             yield return (
                 numbers: new[] { 4, 1, 6, 3, 12 },
                 stringList: new[] { "2qwe", "4qwe", "5", "3qwe", "7qwert", "1 the 12long" },
@@ -268,17 +268,17 @@ namespace Linq.Tests
             yield return (
                 k: 20,
                 integerList: new[] { 1, 3, 76, 96, 78, 45, 3, -89, 56, 41 },
-                expected: new[] { 56, 78, 96, 76 } );
+                expected: new[] { 56, 78, 96, 76 });
             yield return (
                 k: 5,
                 integerList: new[] { 1, 12, 14, 7, 92, 5, 423, 11, 47, 71, 43 },
-                expected: new [] {92, 14, 12});
+                expected: new[] { 92, 14, 12 });
             yield return (
                 k: 7,
                 integerList: new[] { 1, 73, 45, 87, 45, 19, 13, 44, 76, -78 },
                 expected: new List<int>());
         }
-        
+
         private IEnumerable<(int k, int d, IEnumerable<int> integerList, IEnumerable<int> expected)> Task8Data()
         {
             yield return (
@@ -295,14 +295,14 @@ namespace Linq.Tests
                 k: 8,
                 d: 1,
                 integerList: new[] { 12, 17, 18, 19, 25, 14, 45, 71, 63, 78, 11 },
-                expected: new [] { 78, 63, 11 });
+                expected: new[] { 78, 63, 11 });
             yield return (
                 k: 15,
                 d: 25,
                 integerList: new[] { 12, 17, 18, 19, 25, 14, 45, 71, 63, 78, 11 },
                 expected: new[] { 25, 19, 18, 17, 14, 12 });
         }
-        
+
         private IEnumerable<(IEnumerable<string> stringList, IEnumerable<string> expected)> Task9Data()
         {
             yield return (
@@ -316,7 +316,7 @@ namespace Linq.Tests
                 {
                     "EPAM", "GOOGLE", "MICROSOFT", "APPLE", "TESLA", "STARLINK", "TWITTER"
                 },
-                expected: new []
+                expected: new[]
                 {
                     "12-T", "9-M", "8-S", "6-G", "5-A", "4-E"
                 });
@@ -337,13 +337,13 @@ namespace Linq.Tests
                 stringList: new[] { "star", "galaxy", "quasar", "planet", "asteroid", "satellite", "comet" },
                 expected: new[] { "YTR", "D", "T", "E", "R" });
         }
-        */
+
 
         #endregion
 
         #region Advance
         // UNCOMMENT TO CHECK ADVANCED PART
-        /*
+
         [Test]
         public void Task11Test()
         {
@@ -469,7 +469,7 @@ namespace Linq.Tests
             yield return (
                 integerList1: new[] { 1, 12, 4, 5, 78 },
                 integerList2: new[] { 1, 42, 75, 65, 8, 97 },
-                expected: new []
+                expected: new[]
                 {
                     new NumberPair{Item1 = 1, Item2 = 1},
                     new NumberPair{Item1 = 5, Item2 = 65},
@@ -493,7 +493,7 @@ namespace Linq.Tests
                     new NumberPair{Item1 = 12, Item2 = 42}
                 });
         }
-        
+
         private IEnumerable<(IEnumerable<Entrant> nameList, IEnumerable<int> yearList, IEnumerable<YearSchoolStat> expected)> Task13Data()
         {
             yield return (
@@ -510,7 +510,7 @@ namespace Linq.Tests
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017},
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017}
                 },
-                yearList: new[] {2019, 2018},
+                yearList: new[] { 2019, 2018 },
                 expected: new[]
                 {
                     new YearSchoolStat {NumberOfSchools = 2, Year = 2018},
@@ -533,7 +533,7 @@ namespace Linq.Tests
                 yearList: new[] { 2020, 2017, 2018 },
                 expected: new[]
                 {
-                    new YearSchoolStat {NumberOfSchools = 0, Year = 2020}, 
+                    new YearSchoolStat {NumberOfSchools = 0, Year = 2020},
                     new YearSchoolStat {NumberOfSchools = 1, Year = 2017},
                     new YearSchoolStat {NumberOfSchools = 2, Year = 2018}
                 });
@@ -551,19 +551,19 @@ namespace Linq.Tests
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017},
                     new Entrant {LastName = "Name", SchoolNumber = 12, Year = 2017}
                 },
-                yearList: new[] {2020, 2013},
+                yearList: new[] { 2020, 2013 },
                 expected: new[]
                 {
                     new YearSchoolStat {NumberOfSchools = 0, Year = 2013},
                     new YearSchoolStat {NumberOfSchools = 0, Year = 2020}
                 });
         }
-        
+
         private IEnumerable<(IEnumerable<Supplier> supplierList, IEnumerable<SupplierDiscount> supplierDiscountList,
         IEnumerable<MaxDiscountOwner> expected)> Task14Data()
         {
             yield return (
-                    supplierList: new []
+                    supplierList: new[]
                     {
                         new Supplier{Adress = "adress 1", Id = 1, YearOfBirth = 2000},
                         new Supplier{Adress = "adress 2", Id = 2, YearOfBirth = 1961},
@@ -571,7 +571,7 @@ namespace Linq.Tests
                         new Supplier{Adress = "adress 4", Id = 4, YearOfBirth = 1997},
                         new Supplier{Adress = "adress 5", Id = 5, YearOfBirth = 1990}
                     },
-                    supplierDiscountList: new []
+                    supplierDiscountList: new[]
                     {
                         new SupplierDiscount{Discount = 5.0, ShopName = "shop1", SupplierId = 1},
                         new SupplierDiscount{Discount = 1.0, ShopName = "shop2", SupplierId = 1},
@@ -589,7 +589,7 @@ namespace Linq.Tests
                         new SupplierDiscount{Discount = 7.0, ShopName = "shop5", SupplierId = 4},
                         new SupplierDiscount{Discount = 1.5, ShopName = "shop6", SupplierId = 5}
                     },
-                    expected: new []
+                    expected: new[]
                     {
                         new MaxDiscountOwner
                         {
@@ -646,7 +646,7 @@ namespace Linq.Tests
                         new Good{Id = 14, Country = "Italy", Category = "Food"},
                         new Good{Id = 15, Country = "Slovenia", Category = "Food"}
                     },
-                    storePriceList: new []
+                    storePriceList: new[]
                     {
                         new StorePrice{GoodId = 1, Price = 1.25M, Shop = "shop1"},
                         new StorePrice{GoodId = 3, Price = 2.25M, Shop = "shop1"},
@@ -679,7 +679,7 @@ namespace Linq.Tests
                         new StorePrice{GoodId = 3, Price = 2.25M, Shop = "shop6"},
                         new StorePrice{GoodId = 1, Price = 1.20M, Shop = "shop7"}
                     },
-                    expected: new []
+                    expected: new[]
                     {
                         new CountryStat{Country = "Germany", MinPrice = 3.25M, StoresNumber = 5},
                         new CountryStat{Country = "Greece", MinPrice = 11.25M, StoresNumber = 3},
@@ -688,7 +688,7 @@ namespace Linq.Tests
                         new CountryStat{Country = "Ukraine", MinPrice = 1.20M, StoresNumber = 7},
                     });
         }
-         */
+
 
         #endregion
 
