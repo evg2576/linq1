@@ -21,22 +21,22 @@ namespace Linq
 
         public static IEnumerable<int> Task2(IEnumerable<string> stringList)
         {
-            return stringList.Select(s => s.Length).OrderBy(s => s).AsEnumerable();
+            return stringList.Select(s => s.Length).OrderBy(s => s);
         }
 
         public static IEnumerable<string> Task3(IEnumerable<string> stringList)
         {
-            return stringList.Select(s => s.First().ToString() + s.Last().ToString());
+            return stringList.Select(s => string.Concat(s.First(), s.Last()));
         }
 
         public static IEnumerable<string> Task4(int k, IEnumerable<string> stringList)
         {
-            return stringList.Where(s => s.Length == k && char.IsDigit(s.ToArray().Last()) && char.IsDigit(s.ToArray().Last())).OrderBy(s => s);
+            return stringList.Where(s => s.Length == k && char.IsDigit(s.Last())).OrderBy(s => s);
         }
 
         public static IEnumerable<string> Task5(IEnumerable<int> integerList)
         {
-            return integerList.Where(i => i % 2 != 0).Select(s => s.ToString()).OrderBy(s => int.Parse(s));
+            return integerList.Where(x => x % 2 != 0).OrderBy(x => x).Select(x => x.ToString());
         }
 
         #endregion
@@ -45,32 +45,21 @@ namespace Linq
 
         public static IEnumerable<string> Task6(IEnumerable<int> numbers, IEnumerable<string> stringList)
         {
-            return numbers.Select(n => stringList.FirstOrDefault(s => s.Length == n && char.IsDigit(s[0]))?? "Not found");
+            return numbers.Select(n => stringList.FirstOrDefault(s => char.IsDigit(s.First()) && s.Count() == n)?? "Not found");
         }
 
         public static IEnumerable<int> Task7(int k, IEnumerable<int> integerList)
         {
-            return integerList.Where(i => i % 2 == 0).Except(integerList.Skip(k)).Reverse();
+            throw new NotImplementedException();
         }
-        
+
         public static IEnumerable<int> Task8(int k, int d, IEnumerable<int> integerList)
         {
-            return integerList.TakeWhile(i => i <= d).Union(integerList.Skip(k)).OrderByDescending(i => i);
+            throw new NotImplementedException();
         }
 
         public static IEnumerable<string> Task9(IEnumerable<string> stringList)
         {
-            var query = from str in stringList
-                        group str by str.Substring(0, 1) into str
-                        orderby str.Sum(str => str.Length) descending,
-                        str.Key ascending
-                        select { str.Sum(str => str.Length) + "-" + str.Key };
-
-            var query_ = stringList.GroupBy(s => s.Substring(0, 1).Select(p => new
-            {
-                ch = p.Sum(p => s.Length) + "-" + s.Key
-            }
-                /*(s => s.Substring(0, 1).Select(s => s.ToString().Sum(s => s.ToString().Length)))*/;
             throw new NotImplementedException();
         }
 
